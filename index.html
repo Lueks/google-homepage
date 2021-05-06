@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Mockup</title>
+</head>
+<style>
+  body{
+    
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  #center{
+    display: flex;
+    width: 500px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  #logo{
+    width: 272px;
+    height: 92px;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  #searchbar{
+   
+    width: auto;
+    border-radius: 24px;
+    height: 44px;
+   }
+  #searchbutton{
+    margin: 11px 4px;
+    padding: 0px 16px;
+    text-align: center;
+    border-radius: 4px;
+    
+  } 
+  #luckybutton{
+    margin: 11px 4px;
+    padding: 0px 16px;
+    text-align: center;
+    border-radius: 4px;
+  }
+</style>
+<body>
+  <div class="container">
+    <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The google logo">
+    <input id="searchbar" type="text" placeholder="Search...">
+    <div id="center">
+      <button id="searchbutton" type="submit">Lets go</button>
+      <button id="luckybutton" type="submit">I'm feeling lucky</button>
+    </div>
+  </div>
+</body>
+</html>
