@@ -4,64 +4,144 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Mockup</title>
+    <title>Document</title>
 </head>
 <style>
-  body{
-    
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  #center{
-    display: flex;
-    width: 500px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  #logo{
-    width: 272px;
-    height: 92px;
-    justify-content: center;
-    padding-bottom: 10px;
-  }
-  #searchbar{
-   
-    width: auto;
-    border-radius: 24px;
-    height: 44px;
-   }
-  #searchbutton{
-    margin: 11px 4px;
-    padding: 0px 16px;
-    text-align: center;
-    border-radius: 4px;
-    
-  } 
-  #luckybutton{
-    margin: 11px 4px;
-    padding: 0px 16px;
-    text-align: center;
-    border-radius: 4px;
-  }
+    #navbar {
+        display: flex;
+        flex-direction: row;
+        
+    }
+    #navbar p {
+        padding-left: 4px;
+        margin-left: 10px;
+        padding-right: 4px;
+        margin-right: 4px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    #left-nav {
+        display: flex;
+        width: 25%;
+        flex-wrap: nowrap;
+    }
+    #middle-nav {
+        width: 50%;
+    }
+    #right-nav {
+        display: flex;
+        width: 25%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #right-nav div{
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    #right-nav p{
+        padding-right: 15px;
+    }
+    #content {
+        width: auto;
+        max-height: 290px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #logo {
+        width: 272px;
+        height: 92px;
+    }
+    #searchbar {
+        width: 540px;
+        height: 36px;
+        border-radius: 24px;
+        box-shadow: none;
+        border-width: 0.5px;
+        padding-left: 15px;
+        margin-top: 20px; 
+        border: 1px solid gray;
+    }
+    #searchbar:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 3px  rgb(121, 121, 121); 
+    }
+    #buttoncontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 18px;
+    }
+    .btn:hover {
+        box-shadow: 0 1px 1px rgba(0,0,0,.1);
+        border: 1px solid #dadce0;
+    }
+    .btn {
+        margin: 11px 4px;
+        padding: 0px 16px;
+        height: 36px;
+        min-width: 54px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 27px;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        user-select: none;
+        white-space: nowrap;
+        background-color: #f8f9fa;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+    }
+
+    #app {
+        background-color: white;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        color: gray;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 6px;
+        font-family: arial, sans-serif;
+        font-size: 25px;
+        letter-spacing: 0.005em;
+        cursor: pointer;
+    }
+    #app:hover {
+        box-shadow: 0 1px 1px rgba(0,0,0,.2);
+        height: 34px;
+        width: 34px;
+        border-radius: 50%;
+        text-align: center;
+        vertical-align: middle;
+    }
+
 </style>
 <body>
-  <div class="container">
-    <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The google logo">
-    <input id="searchbar" type="text" placeholder="Search...">
-    <div id="center">
-      <button id="searchbutton" type="submit">Lets go</button>
-      <button id="luckybutton" type="submit">I'm feeling lucky</button>
+    <header>
+        <div id="navbar">
+            <div id="left-nav">
+                <p>Über Google</p>
+                <p>Store</p>
+            </div>
+            <div id="middle-nav"></div>
+            <div id= "right-nav">
+                <p>Gmail</p>
+                <p>Bilder</p>
+                <div id="app">...<br>...<br>...</div>
+                <div style="background-color:teal;height:32px;width:32px;border-radius:50%;color:white;text-align:center;vertical-align:middle;line-height:32px;font-family: arial, sans-serif;"><strong>L</strong></div>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+        <input id="searchbar" type="text" placeholder="">  
+        <div id="buttoncontainer">
+            <button class="btn" type="submit">Google Suche</button>
+            <button class="btn" type ="submit">Auf gut Glück!</button>
+        </div>
     </div>
-  </div>
 </body>
 </html>
